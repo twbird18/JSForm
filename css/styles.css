@@ -1,0 +1,21 @@
+
+#title{
+    text-align: center;
+}
+
+fieldset{
+    width: 75%;
+    margin: 0 auto;
+    
+    position: relative;
+}
+input[type="text"], #state{
+    font-size: 16px;
+   position: absolute;;
+   right: 0;
+}
+
+#comments{
+    width: 250px;
+    height: 250px;
+}
