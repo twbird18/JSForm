@@ -11,8 +11,8 @@ fieldset{
 }
 input[type="text"], #state{
     font-size: 16px;
-   position: absolute;;
-   right: 0;
+   /*position: absolute;;
+   right: 0;*/
 }
 
 #comments{

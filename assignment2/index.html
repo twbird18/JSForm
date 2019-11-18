@@ -7,14 +7,17 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="description=" content="This is a test javascript form for CMST 388">
 	<title>Javascript Form - Jennifer Brady</title>
-	<link rel="stylesheet" type="text/css" href="../JSForm/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+    <!--Load Javascript Validation-->
+    <script src="../js/form.js"></script>
 
 
 </head>
 
-<body>
+<body onload="document.registration.userid.focus();">
     <main>
-		<form action="mailto:jbrady02125@gmail.com" method="post" enctype="text/plain" id="registrationform">
+		<form action="mailto:jbrady02125@gmail.com" method="post" enctype="text/plain" id="registrationform" onsubmit="return formValidation();">
 			<fieldset>
 				<h2 id="title">Registration Form</h2>
                <label for="first"> First Name:*</label> <input type="text" id="first" placeholder="First Name"> <br>
