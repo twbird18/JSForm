@@ -9,22 +9,22 @@
 	<title>Javascript Form - Jennifer Brady</title>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 
-    <!--Load Javascript Validation-->
-    <script src="../js/form.js"></script>
+	<!--Load Javascript Validation-->
+	<script src="../js/form.js"></script>
 
 
 </head>
 
-<body onload="document.registration.userid.focus();">
-    <main>
-		<form id="registrationform" onsubmit="return formValidation();">
+<body>
+	
+		<form name="registration" onsubmit="return formValidation();">
 			<fieldset>
 				<h2 id="title">Registration Form</h2>
-                <label for="first"> First Name:*</label> <input type="text" id="first" placeholder="First Name"> <br>
-                <label for="last">Last Name:*</label> <input type="text"  id="last" placeholder="Last Name"> <br>
-                <label for="add">Address:*</label> <input type="text" id="add" placeholder="Street Address"><br>
-                <label for="city">City:*</label> <input type="text" id="city" placeholder="City"><br>
-                <label for="state">State:*</label><select id="state">
+				<label for="first"> First Name:*</label> <input type="text" id="first" placeholder="First Name"> <br>
+				<label for="last">Last Name:*</label> <input type="text"  id="last" placeholder="Last Name"> <br>
+				<label for="add">Address:*</label> <input type="text" id="add" placeholder="Street Address"><br>
+				<label for="city">City:*</label> <input type="text" id="city" placeholder="City"><br>
+				<label for="state">State:*</label><select id="state">
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -76,29 +76,35 @@
                     <option value="WV">West Virginia</option>
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
-</select>	
-<br> 
-<label for="zip">Zip Code:*</label> <input type="text" id="zip" placeholder="Zip Code"><br>
-<label for="shorttext">Phone:* </label><input type="text" id="shorttext" placeholder="Area Code"> <input type="text" id="phone" placeholder="Phone Number"><br>
-<label for="email">E-mail:* </label><input type="text" id="email" placeholder="name@company.com"> <br>
-<label for="confirm">Confirm E-Mail:*</label> <input type="text" id="confirm" placeholder="name@company.com"> <br>
+</select>
+				<br>
+				<label for="zip">Zip Code:*</label> <input type="text" id="zip" placeholder="Zip Code"><br>
+				<label for="shorttext">Phone:* </label><input type="text" id="shorttext" placeholder="Area Code">
+				<input type="text" id="phone" placeholder="Phone Number"><br>
+				<label for="email">E-mail:* </label><input type="text" id="email" placeholder="name@company.com"> <br>
+				<label for="confirm">Confirm E-Mail:*</label> <input type="text" id="confirm" placeholder="name@company.com">
+				<br>
 
 
-<fieldset>
-<legend>Meal Preference*<br>(choose one)</legend>
-<input type="radio" name="meal" value="Vegetarian">Vegetarian <br>
-<input type="radio" name="meal" value="Vegan">Vegan <br>
-<input type="radio" name="meal" value="Non-Vegetarian">Non-Vegetarian </fieldset><br>
+				<fieldset>
+					<legend>Meal Preference*<br>(choose one)</legend>
+						<input type="radio" name="meal" value="Vegetarian">Vegetarian <br>
+						<input type="radio" name="meal" value="Vegan">Vegan <br>
+						<input type="radio" name="meal" value="Non-Vegetarian">Non-Vegetarian </fieldset><br>
 
-<fieldset>
-<legend> Contact Method * <br>(select more than one)</legend>
-<input type="checkbox" name="contact" value="phone">Phone
-<input type="checkbox" name="contact" value="E-mail">E-mail <br> 
-<input type="checkbox" name="contact" value="Mail">Mail <input type="checkbox" id="contact" value="LinkedIn">LinkedIn <br>
+						<fieldset>
+							<legend> Contact Method * <br>(select more than one)</legend>
+								<input type="checkbox" name="contact" value="phone">Phone
+								<input type="checkbox" name="contact" value="E-mail">E-mail <br>
+								<input type="checkbox" name="contact" value="Mail">Mail <input type="checkbox" id="contact" value="LinkedIn">LinkedIn
+								<br>
 </fieldset><br><br>
 
-<label for="comments">Comments:*</label> <input type="textarea" id="comments" placeholder="Please enter any comments."> <br>
-<input type="button" value="Submit" id="submit"> <input type="button" value="Reset" id="reset">
+								<label for="comments">Comments:*</label> <textarea id="comments"></textarea> <br>
+								<input type="submit" value="Submit" id="submit"> <input type="reset" value="Reset" id="reset">
+			</fieldset>
+		</form>
+
 
 
 </body>
