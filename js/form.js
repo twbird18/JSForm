@@ -1,6 +1,6 @@
 
 //verify only alphabet is used
-function allLetter(alpha) {
+function AllLetter(alpha) {
     var letters = /^[A-Za-z]+$/;
     if (alpha.value.match(letters)) {
         return true;
@@ -13,7 +13,7 @@ function allLetter(alpha) {
 
 
 //verify only alphabet and numbers are used
-function alphanumeric(alphanum) {
+function AlphaNumeric(alphanum) {
     var letters = /^[0-9a-zA-Z]+$/;
     if (alphanum.value.match(letters)) {
         return true;
@@ -27,7 +27,7 @@ function alphanumeric(alphanum) {
 
 //verify only numbers are used
 
-function allnumeric(num)
+function AllNumeric(num)
 { 
 var numbers = /^[0-9]+$/;
 if(num.value.match(numbers))
@@ -43,7 +43,7 @@ return false;
 }
 
 //verify a country is selected
-function countryselect(country)
+function CountrySelect(country)
 {
 if(country.value == "Default")
 {
@@ -67,8 +67,20 @@ return true;
 }
 else
 {
-alert("You have entered an invalid email address!");
+alert("Please enter a valid email address!");
 email.focus();
 return false;
 }
 }
+
+//confirm email address
+
+function ConfirmEmail() {
+    var email = document.getElementById("email").value
+    var confirm = document.getElementById("confirm").value
+    if(email != confirm) {
+        alert('Please enter matching email address.');
+    }
+}
+
+//1 radio button checked
