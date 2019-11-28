@@ -38,7 +38,7 @@ function formValidation(){
                                             {
                                                 if (RadioCheck(meal))
                                                 {
-                                                    if (Checked(contack))
+                                                    if (Checked(contact))
                                                     {}
                                                 }
                                                  
@@ -146,28 +146,22 @@ function ConfirmEmail() {
 }
 
 //1 radio button checked
-function RadioCheck()
-{
-    var radioButtons = document.getElementsByName("meal");
-    for(var i = 0; i < radioButtons.length; i++)
-    {
-        if(radioButtons[i].checked == true)
-        {
-            return true;
-        }
-        
-        else{
-            alert("Please select a meal preference.");
-            meal.focus();
-            return false;
-        }
+function RadioCheck() {
+    if (!document.registration.meal[0].checked &&
+        !document.registration.meal[1].checked &&
+        !document.registration.meal[2].checked) {
+        // no radio button is selected
+        alert("Please select a meal preference.");
+        meal.focus();
+        return false;
     }
 }
+  
 
 //check multiple checkboxes
 function Checked() {
     var check = 0; 
-    var contact = document.getElementsByName("contact");
+    var contact = document.getElementsByName("contact").checked;
  
     //Loop and count the number of checked CheckBoxes.
     for (var i = 0; i < contact.length; i++) {
