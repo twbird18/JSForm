@@ -36,11 +36,12 @@ function formValidation(){
                                         {
                                             if (ConfirmEmail(match))
                                             {
-                                                if (RadioCheck(meals))
+                                                if (RadioCheck(meal))
                                                 {
-                                                    if (Checked(contacts))
+                                                    if (Checked(contack))
                                                     {}
-                                                }   
+                                                }
+                                                 
                                                 
                                             }
                                         }
@@ -54,7 +55,9 @@ function formValidation(){
             }
         }
     }
+    console.log("not submitted");
     return false;
+    
 }
 
 //verify only alphabet is used
@@ -72,7 +75,7 @@ function AllLetter(fname) {
 
 //verify only alphabet and numbers are used
 function AlphaNumeric(alphanum) {
-    var letters = /^[0-9a-zA-Z]+$/;
+    var letters = /^[a-zA-Z0-9 ]*$/;
     if (alphanum.value.match(letters)) {
         return true;
     }
@@ -139,6 +142,7 @@ function ConfirmEmail() {
     if(email != confirm) {
         alert('Please enter matching email address.');
     }
+    
 }
 
 //1 radio button checked
@@ -173,9 +177,13 @@ function Checked() {
     }
     //check at least 2 checks
     if (check > 1) {
+        //final check complete, submit form
+        alert('Form Succesfully Submitted');
+        window.location.reload()
         return true;
     } else {
         alert("Please select at least 2 methods of contact");
         return false;
     }
+
 }
