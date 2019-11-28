@@ -13,7 +13,6 @@ function formValidation(){
     var pnum=document.registration.phone;
     var email=document.registration.email;
     var match=document.registration.confirm;
-    var meals=document.registration.meal;
     var contacts=document.registration.contact;
     {
         if (AllLetter(fname))
@@ -36,12 +35,9 @@ function formValidation(){
                                         {
                                             if (ConfirmEmail(match))
                                             {
-                                                if (RadioCheck(meal))
-                                                {
-                                                    if (Checked(contact))
+                                                if (Checked(contacts))
                                                     {}
-                                                }
-                                                 
+                                                                                   
                                                 
                                             }
                                         }
@@ -145,21 +141,8 @@ function ConfirmEmail() {
     
 }
 
-//1 radio button checked
-function RadioCheck() {
-    if (!document.registration.meal[0].checked &&
-        !document.registration.meal[1].checked &&
-        !document.registration.meal[2].checked) {
-        // no radio button is selected
-        alert("Please select a meal preference.");
-        meal.focus();
-        return false;
-    }
-}
-  
-
 //check multiple checkboxes
-function Checked() {
+function Checked(contact) {
     var check = 0; 
     var contact = document.getElementsByName("contact").checked;
  
