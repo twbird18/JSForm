@@ -1,5 +1,4 @@
 
-
 //submit & validate all fields
 function formValidation(){
 
@@ -13,7 +12,7 @@ function formValidation(){
     var pnum=document.registration.phone;
     var email=document.registration.email;
     var match=document.registration.confirm;
-    var contacts=document.registration.contact;
+   
     {
         if (AllLetter(fname))
         {
@@ -35,8 +34,7 @@ function formValidation(){
                                         {
                                             if (ConfirmEmail(match))
                                             {
-                                                if (Checked(contacts))
-                                                {}
+                                                
                                             }
                                         }
                                     }
@@ -139,21 +137,13 @@ function ConfirmEmail() {
     
 }
 //count check boxes
-function Checked(concheck) {
-var chk_arr =  document.getElementsByName("contact[]"); 
-var chklength = chk_arr.length;        
-var count =0;
-	for(k=0;k< chklength;k++)           
-	{
-		    if(chk_arr[k].checked == true){
-			count++;
-		     }
-	 
-	}
-
-	if(count < 2) {
- 		alert("at least 2 checkbox should be checked");
-	}else{
-		return true;
-	}
-}
+     function checkboxes(){
+var checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+if (checked < 2) {
+    // there are <2 checked boxes
+    alert('please check at least 2 options');
+    return false;
+} else {
+    // there are some checked checkboxes
+    return true;
+}}
