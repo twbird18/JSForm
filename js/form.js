@@ -35,9 +35,8 @@ function formValidation(){
                                         {
                                             if (ConfirmEmail(match))
                                             {
-                                                if (Checked(contacts))
-                                                    {}
-                                                                                   
+                                                //if (Checked(contacts))
+                                                //    {}
                                                 
                                             }
                                         }
@@ -51,8 +50,8 @@ function formValidation(){
             }
         }
     }
-    console.log("not submitted");
-    return false;
+    console.log("submitted");
+    return (true);
     
 }
 
