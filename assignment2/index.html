@@ -17,7 +17,7 @@
 
 <body>
 	
-		<form name="registration" action="mailto:jbrady02125@gmail.com" method="post" enctype="text/plain"  onsubmit="return formValidation();"/>
+		<form name="registration" action="mailto:jbrady02125@gmail.com" method="post" enctype="text/plain"  onsubmit="return formValidation();">
 			<fieldset>
 				<h2 id="title">Registration Form</h2>
 				<label for="first"> First Name:*</label> <input type="text" name="first" id="first" placeholder="First Name"> <br>
@@ -95,13 +95,13 @@
 
 						<fieldset>
 							<legend> Contact Method:* <br>(select more than one)</legend>
-								<input type="checkbox" name="contact" value="phone">Phone
-								<input type="checkbox" name="contact" value="E-mail">E-mail <br>
-								<input type="checkbox" name="contact" value="Mail">Mail <input type="checkbox" id="contact" value="LinkedIn">LinkedIn
+								<input type="checkbox" id="contact" name="contact" value="phone">Phone
+								<input type="checkbox" id="contact" name="contact" value="E-mail">E-mail <br>
+								<input type="checkbox" id="contact" name="contact" value="Mail">Mail <input type="checkbox" id="contact" value="LinkedIn">LinkedIn
 								<br>
 </fieldset><br><br>
 
-								<label for="comments">Comments:*</label> <textarea name="comments" id="comments"pattern=".{0,250}" required title="Please enter less than 250 characters."></textarea> <br>
+								<label for="comments">Comments:*</label> <textarea name="comments" id="comments" maxlength="250"></textarea> <br>
 								<input type="submit" value="Submit" id="submit"> <input type="reset" value="Reset" id="reset">
 			</fieldset>
 		</form>

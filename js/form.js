@@ -13,7 +13,7 @@ function formValidation(){
     var pnum=document.registration.phone;
     var email=document.registration.email;
     var match=document.registration.confirm;
-    var contacts=document.registration.contact;
+    var contacts=document.registration;
     {
         if (AllLetter(fname))
         {
@@ -36,7 +36,10 @@ function formValidation(){
                                             if (ConfirmEmail(match))
                                             {
                                                 if (Checked(contacts))
-                                                    {}
+                                                    {
+
+console.log("checked");
+                                                    }
                                                 
                                             }
                                         }
@@ -142,24 +145,22 @@ function ConfirmEmail() {
 
 //check multiple checkboxes
 function Checked(concheck) {
-    var check = 0; 
+
     var concheck = document.getElementById('registration').getElementsByName('contact').checked;
- 
-    //Loop and count the number of checked CheckBoxes.
+    var checked = 0;
+
     for (var i = 0; i < concheck.length; i++) {
-        if (concheck[i].check) {
-            check++;
+        if (concheck[i].checked) {
+            checked++;
+
+        }
+        if (checked > 1) {
+            return true;
+        }
+        else {
+            alert('Please make at least 2 selections');
+            contact.focus();
+            return false;
         }
     }
-    //check at least 2 checks
-    if (check > 1) {
-        //final check complete, submit form
-        alert('Form Succesfully Submitted');
-        window.location.reload()
-        return true;
-    } else {
-        alert("Please select at least 2 methods of contact");
-        return false;
-    }
-
 }
