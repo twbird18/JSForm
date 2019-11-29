@@ -35,8 +35,8 @@ function formValidation(){
                                         {
                                             if (ConfirmEmail(match))
                                             {
-                                                //if (Checked(contacts))
-                                                //    {}
+                                                if (Checked(contacts))
+                                                    {}
                                                 
                                             }
                                         }
@@ -51,7 +51,7 @@ function formValidation(){
         }
     }
     console.log("submitted");
-    return (true);
+    return;
     
 }
 
@@ -141,13 +141,13 @@ function ConfirmEmail() {
 }
 
 //check multiple checkboxes
-function Checked(contact) {
+function Checked(concheck) {
     var check = 0; 
-    var contact = document.getElementsByName("contact").checked;
+    var concheck = document.getElementById('registration').getElementsByName('contact').checked;
  
     //Loop and count the number of checked CheckBoxes.
-    for (var i = 0; i < contact.length; i++) {
-        if (contact[i].check) {
+    for (var i = 0; i < concheck.length; i++) {
+        if (concheck[i].check) {
             check++;
         }
     }
