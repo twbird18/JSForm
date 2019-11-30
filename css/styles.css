@@ -1,21 +1,64 @@
 
+
 #title{
     text-align: center;
 }
 
 fieldset{
     width: 75%;
-    margin: 0 auto;
-    
+    margin: 0 auto;    
     position: relative;
 }
 input[type="text"], #state{
     font-size: 16px;
-   /*position: absolute;;
-   right: 0;*/
+    width: 70%;
 }
 
 #comments{
     width: 250px;
     height: 250px;
+}
+
+label {
+  text-align: right;
+  grid-column: 1;
+}
+
+label::after {
+  content: ':'
+}
+
+input, #state{
+    grid-column: 3;
+}
+
+#shorttext{
+    
+    width: 100px;
+    
+}
+.content{
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% 5% auto;
+
+
+}
+.content2{
+    
+    width: 75%;
+    margin: 0 auto;
+
+}
+.content2 *{
+    vertical-align: middle;
+}
+
+#comments{
+    width: 75%;
+}
+
+#submit, #reset{
+    width: 100px;
 }

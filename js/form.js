@@ -1,55 +1,31 @@
 
 //submit & validate all fields
-function formValidation(){
+function formValidation() {
 
-    var fname=document.registration.first;
-    var lname=document.registration.last;
-    var address=document.registration.add;
-    var cityname=document.registration.city;
-    var statename=document.registration.state;
-    var zipcode=document.registration.zip;
-    var area=document.registration.shorttext;
-    var pnum=document.registration.phone;
-    var email=document.registration.email;
-    var match=document.registration.confirm;
-   
-    {
-        if (AllLetter(fname))
-        {
-            if (AllLetter(lname))
-            {
-                if (AlphaNumeric(address))
-                {
-                    if (AllLetter(cityname))
-                    {
-                        if (CountrySelect(statename))
-                        {
-                            if (AllNumeric(zipcode))
-                            {
-                                if (AllNumeric(area))
-                                {
-                                    if (AllNumeric(pnum))
-                                    {
-                                        if (ValidateEmail(email))
-                                        {
-                                            if (ConfirmEmail(match))
-                                            {
-                                                
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+    var fname = document.registration.first;
+    var lname = document.registration.last;
+    var address = document.registration.add;
+    var cityname = document.registration.city;
+    var statename = document.registration.state;
+    var zipcode = document.registration.zip;
+    var area = document.registration.shorttext;
+    var pnum = document.registration.phone;
+    var email = document.registration.email;
+    var match = document.registration.confirm;
 
-                        }
-                    }
-                }
-            }
-        }
+
+    if (AllLetter(fname) && AllLetter(lname) && AlphaNumeric(address) && AllLetter(cityname) &&
+        CountrySelect(statename) && AllNumeric(zipcode) && AllNumeric(area) && AllNumeric(pnum) && 
+        ValidateEmail(email) && ConfirmEmail(match)) {
+            
+        return true;
     }
-    console.log("submitted");
-    return true;
-    
+
+    else {
+       
+        return false;
+
+    }
 }
 
 //verify only alphabet is used
