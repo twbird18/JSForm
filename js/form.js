@@ -18,12 +18,12 @@ function formValidation() {
         CountrySelect(statename) && AllNumeric(zipcode) && AllNumeric(area) && AllNumeric(pnum) && 
         ValidateEmail(email) && ConfirmEmail(match)) {
             
-        return true;
+        return false;
     }
 
     else {
        
-        return false;
+        return true;
 
     }
 }
