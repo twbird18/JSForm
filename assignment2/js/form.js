@@ -120,6 +120,7 @@ if (checked < 2) {
     alert('please check at least 2 options');
     return false;
 } else {
-    // there are some checked checkboxes
+    // there are some checked checkboxes, finish form validation
+    formValidation();
     return true;
 }}
